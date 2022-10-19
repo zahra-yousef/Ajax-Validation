@@ -82,17 +82,11 @@
                         $('#submit').html('Please Wait...');
                         $("#submit").attr("disabled", true);
 
-                        var contact = {
-                            'name': $('#name').val(),
-                            'email': $('#email').val(),
-                            'mesasge': $('#message').val(),
-                        }
                         $.ajax({
                             url: "{{route('store-data')}}",
                             type: "POST",
-                            data: contact,//$('#contactUsForm').serialize(),
+                            data: $('#contactUsForm').serialize(),
                             success: function(response) {
-                                console.log("hi2");
                                 $('#submit').html('Submit');
                                 $("#submit"). attr("disabled", false);
                                 alert('Ajax form has been submitted successfully');
