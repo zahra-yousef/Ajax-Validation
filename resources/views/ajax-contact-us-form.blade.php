@@ -81,7 +81,7 @@
                         });
                         $('#submit').html('Please Wait...');
                         $("#submit").attr("disabled", true);
-                        console.log("hi1");
+
                         var contact = {
                             'name': $('#name').val(),
                             'email': $('#email').val(),
@@ -99,8 +99,7 @@
                                 document.getElementById("contactUsForm").reset(); 
                             }
                         });
-                        console.log('hi3');
-                    }
+                   }
                 });
             }
         </script>
